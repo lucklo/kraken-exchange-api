@@ -10,15 +10,15 @@ describe('Kraken Connectivity', function () {
       const allowedTimeDiscrepancy = 3600 // An hour
       const localUnixTimeStamp = Math.floor(new Date() / 1000)
       const referenceTimestamp = localUnixTimeStamp - allowedTimeDiscrepancy
-
       const krakenTime = new KrakenTime()
-      krakenTime.getUnixTime().then((unixTime) => {
-        console.log(unixTime)
-        unixTime.should.be.greaterThan(referenceTimestamp)
-      }).catch(() => {
-        throw new Error('it failed to respond with unix timestamp')
-      })
 
+      return krakenTime.getUnixTime()
+        .then((unixTime) => {
+          console.log(unixTime)
+          unixTime.should.be.greaterThan(referenceTimestamp)
+        }).catch(() => {
+          throw new Error('it failed to respond with unix timestamp')
+        })
     })
   })
 })
