@@ -24,6 +24,16 @@ Kraken.Time.getUnixTime(/** optional **/ callback)
     * `callback` (optional)   
 * Returns: `Promise`
 
+#### getTimeinRfc1123()
+```javascript
+Kraken.Time.getTimeInRfc1123(/** optional **/ callback) 
+```
+Returns RFC1123 compilant timestamp string.
+
+* Arguments:
+    * `callback` (optional)   
+* Returns: `Promise`
+
 ##### Example Usage:
 ```javascript
 const KrakenTime = require('kraken-exchange-api').Time
