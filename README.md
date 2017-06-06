@@ -18,7 +18,7 @@ Every Object we created provide both `Promise` and `callback` support.
 ### Kraken.Time
 #### getUnixTime()
 ```javascript
-Kraken.Time.getUnixTime(\** optional **\ callback) 
+Kraken.Time.getUnixTime(/** optional **/ callback) 
 ```
 * Arguments:
     * `callback` (optional)   
