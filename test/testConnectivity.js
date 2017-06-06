@@ -1,8 +1,7 @@
-const assert = require('assert')
 const should = require('chai').should
-should()
-
 const KrakenTime = require('../lib/index').Time
+
+should()
 
 describe('Kraken Connectivity', function () {
   describe('Kraken Time connectivity', function() {
@@ -14,8 +13,8 @@ describe('Kraken Connectivity', function () {
 
       return krakenTime.getUnixTime()
         .then((unixTime) => {
-          console.log(unixTime)
-          unixTime.should.be.greaterThan(referenceTimestamp)
+          unixTime
+            .should.be.greaterThan(referenceTimestamp)
         }).catch(() => {
           throw new Error('it failed to respond with unix timestamp')
         })
