@@ -23,7 +23,7 @@ Kraken.Time.getUnixTime(/** optional **/ callback)
 * Arguments:
     * `callback` (optional)   
 * Returns: `Promise`
-
+    * Resolved Value Type: `integer`
 #### getTimeinRfc1123()
 ```javascript
 Kraken.Time.getTimeInRfc1123(/** optional **/ callback) 
@@ -33,6 +33,7 @@ Returns RFC1123 compilant timestamp string.
 * Arguments:
     * `callback` (optional)   
 * Returns: `Promise`
+    * Resolved Value Type: `string`
 
 ##### Example Usage:
 ```javascript
