@@ -15,9 +15,16 @@ To access Private API from Kraken you need to request ApiKey and ApiSecret from 
 ## Built-In Kraken API Objects
 Every Object we created provide both `Promise` and `callback` support.
 
-
 ### Kraken.Time
+#### getUnixTime()
+```javascript
+Kraken.Time.getUnixTime(\** optional **\ callback) 
+```
+* Arguments:
+    * `callback` (optional)   
+* Returns: `Promise`
 
+##### Example Usage:
 ```javascript
 const KrakenTime = require('kraken-exchange-api').Time
 const time = new KrakenTime
