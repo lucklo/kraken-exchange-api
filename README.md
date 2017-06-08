@@ -69,3 +69,41 @@ time
     console.log(unixTimeStamp)
   })
 ```
+
+### Kraken.Assets
+#### getAssets()
+```javascript
+Kraken.Assets.getAssets(assets, /** optional **/ callback) 
+```
+Returns specific assets information.
+
+* Arguments:
+    * `assets` (required) - Array of assets i.e `['XBT', 'ETH']`
+    * `callback` (optional)   
+* Returns: `Promise`
+    * Resolved Value Type: `Array` of Assets
+
+#### getAsset()
+```javascript
+Kraken.Assets.getAsset(asset, /** optional **/ callback) 
+```
+Returns single specific asset information.
+
+* Arguments:
+    * `asset` (required)    - Asset identifier i.e. `XBT`
+    * `callback` (optional)   
+* Returns: `Promise`
+    * Resolved Value Type: `Object` of Asset
+    
+#### getAllAssets()
+```javascript
+Kraken.Assets.getAllAssets(/** optional **/ callback) 
+```
+Returns information about all assets
+
+* Arguments:
+   
+    * `callback` (optional)   
+* Returns: `Promise`
+    * Resolved Value Type: `Array` of Assets
+    
