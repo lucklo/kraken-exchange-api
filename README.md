@@ -102,7 +102,6 @@ Kraken.Assets.getAllAssets(/** optional **/ callback)
 Returns information about all assets
 
 * Arguments:
-   
     * `callback` (optional)   
 * Returns: `Promise`
     * Resolved Value Type: `Array` of Assets
