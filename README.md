@@ -114,7 +114,7 @@ Kraken.AssetPairs.getAssetPairs(assetPairs, /** optional **/ callback)
 Returns information about specified asset pairs
 
 * Arguments:
-    * `assets` (required) - Array of assets i.e `['XBT', 'ETH']`
+    * `assets` (required) - Array of assets i.e `[XBTEUR', 'XBTUSD']`
     * `callback` (optional)   
 * Returns: `Promise`
     * Resolved Value Type: `Array` of Assets Pairs
@@ -126,7 +126,7 @@ Kraken.AssetPairs.getSingleAssetPair(assetPair, /** optional **/ callback)
 Returns single specific asset pair information.
 
 * Arguments:
-    * `asset` (required)    - Asset identifier i.e. `XBT`
+    * `asset` (required)    - Asset identifier i.e. `XBTEUR`
     * `callback` (optional)   
 * Returns: `Promise`
     * Resolved Value Type: `Object` of Asset Pair
