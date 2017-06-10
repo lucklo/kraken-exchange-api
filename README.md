@@ -31,8 +31,8 @@ to get basic information about Market. See [`Public market data section at Krake
 To access Private API from Kraken you need to request ApiKey and ApiSecret from your Account Settings in Kraken Dashboard.
 
 
-## Built-In Kraken API Objects
-Every Object we created provide both `Promise` and `callback` support.
+## Built-In Kraken API Support
+Every Class we created provide both `Promise` and `callback` interface.
 
 ### Kraken.Time
 #### getUnixTime()
@@ -118,7 +118,7 @@ Kraken.AssetPairs.getAssetPairs(assetPairs, /** optional **/ callback)
 Returns information about specified asset pairs
 
 * Arguments:
-    * `assets` (required) - Array of assets i.e `[XBTEUR', 'XBTUSD']`
+    * `assetPairs` (required) - Array of asset pairs i.e `[XBTEUR', 'XBTUSD']`
     * `callback` (optional)   
 * Returns: `Promise`
     * Resolved Value Type: `Array` of Assets Pairs
@@ -130,7 +130,7 @@ Kraken.AssetPairs.getSingleAssetPair(assetPair, /** optional **/ callback)
 Returns single specific asset pair information.
 
 * Arguments:
-    * `asset` (required)    - Asset identifier i.e. `XBTEUR`
+    * `assetPair` (required)    - Asset pair identifier i.e. `XBTEUR`
     * `callback` (optional)   
 * Returns: `Promise`
     * Resolved Value Type: `Object` of Asset Pair
