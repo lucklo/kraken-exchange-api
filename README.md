@@ -73,9 +73,9 @@ time
 ### Kraken.Assets
 #### getAssets()
 ```javascript
-Kraken.Assets.getAssets(assets, /** optional **/ callback) 
+Kraken.Assets.getAsset(assets, /** optional **/ callback) 
 ```
-Returns specific assets information.
+Returns specified assets information.
 
 * Arguments:
     * `assets` (required) - Array of assets i.e `['XBT', 'ETH']`
@@ -106,3 +106,38 @@ Returns information about all assets
 * Returns: `Promise`
     * Resolved Value Type: `Array` of Assets
     
+### Kraken.AssetPairs
+#### getAssetPairs()
+```javascript
+Kraken.AssetPairs.getAssetPairs(assetPairs, /** optional **/ callback) 
+```
+Returns information about specified asset pairs
+
+* Arguments:
+    * `assets` (required) - Array of assets i.e `['XBT', 'ETH']`
+    * `callback` (optional)   
+* Returns: `Promise`
+    * Resolved Value Type: `Array` of Assets Pairs
+
+#### getAssetPair()
+```javascript
+Kraken.AssetPairs.getAssetPair(assetPair, /** optional **/ callback) 
+```
+Returns single specific asset pair information.
+
+* Arguments:
+    * `asset` (required)    - Asset identifier i.e. `XBT`
+    * `callback` (optional)   
+* Returns: `Promise`
+    * Resolved Value Type: `Object` of Asset Pair
+    
+#### getAllAssetPairs()
+```javascript
+Kraken.AssetPairs.getAllAssetPairs(/** optional **/ callback) 
+```
+Returns information about all asset pairs 
+
+* Arguments:
+    * `callback` (optional)   
+* Returns: `Promise`
+    * Resolved Value Type: `Array` of Asset Pairs
