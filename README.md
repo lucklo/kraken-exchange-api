@@ -10,7 +10,11 @@ If you like to contribute feel free to contact author of this repo or push `Pull
 
 
 ## Installation
-This library is `not yet available` in `npm`. We are planning to release it when it will be production ready.
+Please install this package using `npm`
+kraken-exchange-node-api
+```bash
+npm install kraken-exchange-node-api
+```
 
 ## Requirements
 This library was written in ES2015 code. We highly recommenda any version of Node.js greater than 7.
