@@ -1,5 +1,6 @@
 const should = require('chai').should
 const KrakenTime = require('../lib/index').Time
+const nockTime = require('./nock/nockPublicEndpointsMocks')
 
 should()
 
