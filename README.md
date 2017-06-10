@@ -145,3 +145,30 @@ Returns information about all asset pairs
     * `callback` (optional)   
 * Returns: `Promise`
     * Resolved Value Type: `Array` of Asset Pairs
+    
+
+### Kraken.Ticker
+#### getPairsTickers()
+```javascript
+Kraken.Ticker.getPairsTickers(assetPairs, /** optional **/ callback) 
+```
+Returns ticker information about specified asset pairs
+
+* Arguments:
+    * `assetPairs` (required) - Array of asset pairs i.e `[XBTEUR', 'XBTUSD']`
+    * `callback` (optional)   
+* Returns: `Promise`
+    * Resolved Value Type: `Array` of Ticker Info for selected Pairs
+
+#### getSinglePairTicker()
+```javascript
+Kraken.Ticker.getSinglePairTicker(assetPair, /** optional **/ callback) 
+```
+Returns ticker info of single specific asset pair
+
+* Arguments:
+    * `assetPair` (required)    - Asset pair identifier i.e. `XBTEUR`
+    * `callback` (optional)   
+* Returns: `Promise`
+    * Resolved Value Type: `Object` with Ticker Info
+    
