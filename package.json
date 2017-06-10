@@ -1,6 +1,6 @@
 {
   "name": "kraken-exchange-node-api",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Łukasz Łoboda",
   "bugs": "https://github.com/lucklo/kraken-exchange-api/issues",
   "contributors": [
