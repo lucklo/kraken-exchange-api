@@ -28,7 +28,7 @@ describe('AssetPairs', function() {
 
   it('should return single selected asset pair', function() {
     const selectedAssetPair = 'XBTEUR'
-    return assetsPairs.getAssetPair(selectedAssetPair)
+    return assetsPairs.getSingleAssetPair(selectedAssetPair)
       .then((rawAssetPairs) => {
         const assetPairs = Object.keys(rawAssetPairs)
         assetPairs.should.to.be.an('array').that.is.not.empty

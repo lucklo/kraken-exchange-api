@@ -27,7 +27,7 @@ describe('Kraken Assets Endpoint', function() {
 
   it('should get only one selected asset', function() {
     const selectedAsset = 'XBT'
-    return krakenAssets.getAsset(selectedAsset)
+    return krakenAssets.getSingleAsset(selectedAsset)
       .then(asset => {
         const assetsCount = Object.keys(asset).length
         assetsCount.should.be.equal(1)

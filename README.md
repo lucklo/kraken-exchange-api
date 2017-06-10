@@ -85,7 +85,7 @@ Returns specified assets information.
 
 #### getAsset()
 ```javascript
-Kraken.Assets.getAsset(asset, /** optional **/ callback) 
+Kraken.Assets.getSingleAsset(asset, /** optional **/ callback) 
 ```
 Returns single specific asset information.
 
@@ -119,9 +119,9 @@ Returns information about specified asset pairs
 * Returns: `Promise`
     * Resolved Value Type: `Array` of Assets Pairs
 
-#### getAssetPair()
+#### getSingleAssetPair()
 ```javascript
-Kraken.AssetPairs.getAssetPair(assetPair, /** optional **/ callback) 
+Kraken.AssetPairs.getSingleAssetPair(assetPair, /** optional **/ callback) 
 ```
 Returns single specific asset pair information.
 
