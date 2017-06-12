@@ -158,7 +158,7 @@ Returns ticker information about specified asset pairs
     * `assetPairs` (required) - Array of asset pairs i.e `[XBTEUR', 'XBTUSD']`
     * `callback` (optional)   
 * Returns: `Promise`
-    * Resolved Value Type: `Array` of Ticker Info for selected Pairs
+    * Resolved Value Type: `Array` of [`TickerInfo`](#tickerinfo) Objects for selected Pairs
 
 #### getSinglePairTicker()
 ```javascript
@@ -170,5 +170,84 @@ Returns ticker info of single specific asset pair
     * `assetPair` (required)    - Asset pair identifier i.e. `XBTEUR`
     * `callback` (optional)   
 * Returns: `Promise`
-    * Resolved Value Type: `Object` with Ticker Info
+    * Resolved Value Type: [`TickerInfo`](#tickerinfo) Object
     
+## Info Objects
+### TickerInfo
+Class that encapsulate data for single Ticker. It's useful for retrieving specific information about Ticker in easy & readable way.
+
+#### TickerInfo.getAskPrice()
+```javascript
+TickerInfo.getAskPrice() 
+````
+Returns Ask Price of Ticker i.e `2487.55089`
+
+* Returns: `float`
+
+#### TickerInfo.getBidPrice()
+```javascript
+TickerInfo.getBidPrice() 
+```
+Returns Bid Price of Ticker i.e. `2487.55089`
+* Returns: `float`
+
+#### TickerInfo.getPairName()
+```javascript
+TickerInfo.getBidPrice() 
+```
+Returns pair name of Ticker object i.e. `XXBTZEUR`
+
+* Returns: `string`
+#### TickerInfo.getPart(part)
+```javascript
+TickerInfo.getPart(/** required **/ part)
+```
+Returns selected part of ticker. Keep in mind that floats values (i.e. prices) won't be casted to `float` type.
+
+* Arguments:
+    * `part` (required) - Array of ticker parts (see. [`TickerParts`](#tickerparts))
+* Returns: `string|int`
+
+#### TickerInfo.getParts()
+```javascript
+TickerInfo.getParts(/** required **/ partsArray) 
+```
+Returns selected parts of ticker. Order is being kept as in input params
+
+* Arguments:
+    * `partsArray` (required) - Array of ticker parts (see. [`TickerParts`](#tickerparts))
+* Returns: `Array` with values of selected Ticker parts
+
+#### TickerInfo.getRawData()
+```javascript
+TickerInfo.getRawData() 
+```
+Returns raw response from Kraken API in form of Object
+
+* Returns: `Object`
+
+## Object Parts (Dictionaries)
+### TickerParts
+Provides parts available in TickerInfo that are provided by Kraken API.
+Following `parts` are supported:
+
+* AskPrice
+* AskWholeLotVolume
+* AskLotVolume
+* BidPrice
+* BidWholeLotVolume
+* BidLotVolume
+* ClosePrice
+* CloseLotVolume
+* VolumeToday
+* VolumeLast24h
+* VolumeWeightedAveragePriceToday
+* VolumeWeightedAveragePriceLast24h
+* TradesToday
+* TradesLast24h
+* LowPriceToday
+* LowPriceLast24h
+* HighPriceToday
+* HighPriceLast24h
+* OpenPrice
+
