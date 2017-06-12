@@ -56,8 +56,8 @@ Returns RFC1123 compilant timestamp string.
 
 ##### Example Usage:
 ```javascript
-const KrakenTime = require('kraken-exchange-node-api').Time
-const time = new KrakenTime
+const Kraken = require('kraken-exchange-node-api')
+const time = new Kraken.Time()
 
 // Promise Based
 time
