@@ -148,6 +148,21 @@ Returns information about all asset pairs
     
 
 ### Kraken.Ticker
+Provides interface to retrieve Ticker information about given Asset Pairs.
+
+##### Example Usage:
+```javascript
+const ticker = new Kraken.Ticker()
+const parts = Kraken.TickerParts
+
+ticker.getSinglePairTicker('XBTEUR')
+   .then((ticker) => {	 
+     const [volumeWeightedAveragePriceLast24h, volumeLast24h] = ticker.getParts([parts.VolumeWeightedAveragePriceLast24h, parts.VolumeLast24h])
+     const spread = ticker.getAskPrice() - ticker.getBidPrice()
+     console.log(ticker.getPairName(), spread, volumeWeightedAveragePriceLast24h, volumeLast24h)
+   })
+```
+
 #### getPairsTickers()
 ```javascript
 Kraken.Ticker.getPairsTickers(assetPairs, /** optional **/ callback) 
